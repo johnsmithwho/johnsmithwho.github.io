@@ -1,0 +1,28 @@
+# Site Settings
+title: Start Jekyll
+email: johnsmith6181@gmail.com
+description: >
+  A private work log.
+baseurl: ""
+url: "http://johnsmithwho.github.io"
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+paginate: 4
+paginate_path: posts/page:num
+highlighter: rouge 
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1

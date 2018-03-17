@@ -1,0 +1,78 @@
+---
+layout: default
+---
+		<!-- Features -->	
+		
+
+		<article id="examples">
+		<BR>
+			<ul>
+
+
+{% for post in paginator.posts %}
+					<li>
+					<a href="{{ post.url }}">
+						<img src="img/example_grid_fixed.png" />
+						<h4>{{ post.title }}</h4>
+					</a>
+					<span>
+<font size="1"><b>{{ post.date | date: "%B %e, %Y" }}</b> <BR> 
+{% for category in post.categories %}
+{{ category }}
+{% endfor %}</font><BR>
+					{{ post.description }}</span>
+<span>[
+  {% for tag in post.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}">{{ tag_name }}&nbsp;</a>
+  {% endfor %}
+]</span>
+					</li>
+			
+{% endfor %}
+
+
+			</ul>
+
+
+
+{% if paginator.total_pages > 1 %}  
+<div class="pagination">  
+  {% if paginator.previous_page %}  
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>  
+  {% else %}  
+    <span>&laquo; Prev</span>  
+  {% endif %}  
+  
+  {% for page in (1..paginator.total_pages) %}  
+    {% if page == paginator.page %}  
+      <em>{{ page }}</em>  
+    {% elsif page == 1 %}  
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>  
+    {% else %}  
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>  
+    {% endif %}  
+  {% endfor %}  
+  
+  {% if paginator.next_page %}  
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>  
+  {% else %}  
+    <span>Next &raquo;</span>  
+  {% endif %}  
+</div>  
+{% endif %}  
+
+
+
+		</article>
+
+		<article id="downloads">
+			<h3 class="seperator">DOWNLOADS</h3>
+			<ul>
+				<li><a href="https://github.com/artofrawr/profoundgrid/archive/master.zip">Download .Zip File</a></li>
+				<li><a href="https://github.com/artofrawr/profoundgrid/">Source on Github</a></li>
+			</ul>
+		</article>
+
+		    
+
