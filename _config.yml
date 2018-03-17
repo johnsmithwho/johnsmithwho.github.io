@@ -4,7 +4,7 @@ email: johnsmith6181@gmail.com
 description: >
   A private work log.
 baseurl: ""
-url: "http://johnsmithwho.github.io"
+url: "https://johnsmithwho.github.io"
 # Build Settings
 sass:
   sass_dir: _sass
