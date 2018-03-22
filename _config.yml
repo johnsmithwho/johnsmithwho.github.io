@@ -9,8 +9,10 @@ url: "https://johnsmithwho.github.io"
 sass:
   sass_dir: _sass
 include: ['_pages']
-paginate: 4
-paginate_path: posts/page:num
+gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
+paginate: 3
+paginate_path: "page:num"
 highlighter: rouge 
 kramdown:
   input: GFM
