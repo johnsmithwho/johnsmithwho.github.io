@@ -34,9 +34,43 @@ line-height: 17px;
 {
 color: #666;
 
+}
+.right {
+    float: right;}
+.left {
+    float: left;}
 
+.pagination
+{
+  width: 100%;
+  margin-top:20px;
 
 }
+.pagination a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.pagination a:hover {
+    background-color: #AA0000;
+    color: black;
+}
+
+.previous {
+    background-color: #660000;
+    color: black;
+}
+
+.next {
+    background-color: #660000;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
 
 .highlight .gh {
   color: #999999;
